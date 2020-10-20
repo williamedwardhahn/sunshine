@@ -56,5 +56,9 @@ class simulation:
     self.done = True
     self.current = self.results[0,:] # restore initial conditions
     
-
     
+    
+def flow(name,start,end,formula):
+      for x in list((s.ix).keys()):
+          formula = formula.replace(x, "s."+x)
+      return (f"s.flow1('{name}', start='{start}', end='{end}', f=lambda t: {formula})")
