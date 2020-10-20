@@ -58,7 +58,4 @@ class simulation:
     
     
     
-def flow(name,start,end,formula):
-      for x in list((s.ix).keys()):
-          formula = formula.replace(x, "s."+x)
-      return (f"s.flow1('{name}', start='{start}', end='{end}', f=lambda t: {formula})")
+
